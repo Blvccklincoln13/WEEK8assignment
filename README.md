@@ -1,1 +1,9 @@
 # WEEK8assignment
+class Square { protected:     double side;
+public:     Square(double s) : side(s) {}     virtual ~Square() {}
+    double getPerimeter() const {         return 4 * side;     }
+    virtual double getArea() const {         return side * side;     } };
+class Cube : public Square { public:     Cube(double s) : Square(s) {}     ~Cube() {}
+    double getArea() const override {         return 6 * side * side;     }
+    double getVolume() const {         return side * side * side;     }
+};
